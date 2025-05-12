@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 7%; /* Dark background */
+    --foreground: 210 40% 98%;
+
+    --card: 240 10% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 240 10% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 267 100% 65%; /* Vibrant purple */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 232 100% 65%; /* Electric blue */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 240 6% 20%;
+    --muted-foreground: 215 20% 75%;
+
+    --accent: 24 100% 55%; /* Bright orange */
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 6% 20%;
+    --input: 240 6% 15%;
+    --ring: 267 100% 65%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 240 10% 5%;
+    --sidebar-foreground: 240 5% 90%;
+    --sidebar-primary: 267 100% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 6% 15%;
+    --sidebar-accent-foreground: 240 5% 90%;
+    --sidebar-border: 240 6% 15%;
+    --sidebar-ring: 267 100% 65%;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes sound-wave {
+  0% {
+    transform: scaleY(0.5);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0.5);
+  }
+}
+
+@keyframes battle-flash {
+  0%, 100% {
+    box-shadow: 0 0 5px 2px rgba(126, 105, 171, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px 5px rgba(126, 105, 171, 0.8);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
